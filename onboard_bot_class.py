@@ -56,7 +56,6 @@ class OnboardBot:
     @staticmethod
     @__dp.message_handler(commands=["start"], state="*")
     async def cmd_start(message: types.Message):
-        
         await StartDialogForm.employee.set()
         await message.reply("Укажите свое ФИО", reply_markup=types.ReplyKeyboardRemove())
 
@@ -70,7 +69,6 @@ class OnboardBot:
             QUERY(OnboardBot.__connection,
                   query=f"""UPDATE public."Employee" SET id_chat = '{message.chat.id}' 
                   WHERE full_name = '{message.text}' """)
-            
             await state.finish()
             await MainDialogForm.main.set()
             await message.answer("Что хотите узнать?", reply_markup=MainKeyboard.main_kb)
