@@ -18,7 +18,8 @@ python 3.8 и выше
 git clone https://github.com/GoreevArtem/CodeRocksHack.git
 cd CodeRocksHack/
 ```
-Админ панель находится в ветке admin
+Админ панель находится в ветке admin <br />
+
 Телеграм бот находится в ветке telegram
 
 БД у нас находится на сервере но можно развернуть локально с помощью дампа new.sql (Postgres)
